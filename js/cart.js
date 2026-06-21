@@ -1,8 +1,8 @@
 // ===== CART STATE & LOGIC =====
-let cart = JSON.parse(localStorage.getItem('chalukya_cart') || '[]');
+let cart = JSON.parse(localStorage.getItem('srgrand_cart') || '[]');
 
 function saveCart() {
-  localStorage.setItem('chalukya_cart', JSON.stringify(cart));
+  localStorage.setItem('srgrand_cart', JSON.stringify(cart));
   updateCartUI();
 }
 

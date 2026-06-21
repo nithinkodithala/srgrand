@@ -56,7 +56,7 @@ const DB = (function () {
       cache.overrides = JSON.parse(localStorage.getItem('menuOverrides') || '{}');
       cache.customItems = JSON.parse(localStorage.getItem('customItems') || '[]');
       cache.customCategories = JSON.parse(localStorage.getItem('customCategories') || '[]');
-      cache.orders = JSON.parse(localStorage.getItem('chalukya_orders') || '[]');
+      cache.orders = JSON.parse(localStorage.getItem('srgrand_orders') || '[]');
     } catch (e) { console.warn('localStorage read failed', e); }
   }
   function persistLocalMenu() {
@@ -65,7 +65,7 @@ const DB = (function () {
     localStorage.setItem('customCategories', JSON.stringify(cache.customCategories));
   }
   function persistLocalOrders() {
-    localStorage.setItem('chalukya_orders', JSON.stringify(cache.orders));
+    localStorage.setItem('srgrand_orders', JSON.stringify(cache.orders));
   }
 
   // ---------- init ----------
