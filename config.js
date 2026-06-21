@@ -1,6 +1,6 @@
 // Restaurant Configuration - Edit values here (mirrors .env)
 const CONFIG = {
-  RESTAURANT_NAME: "Sr Grand Hotel Grand Multi Cuisine Restaurant",
+  RESTAURANT_NAME: "SR Grand Family Restaurant",
   RESTAURANT_PHONE: "+919030740810",
   RESTAURANT_WHATSAPP: "+919030740810",
   RESTAURANT_MAP_URL: "https://maps.app.goo.gl/vNvWPRRiATstaaPC6",
