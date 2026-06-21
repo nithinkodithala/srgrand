@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(Start-Process \"C:\\\\AIFDE\\\\SR GRAND HOTEL -1\\\\index.html\"; Write-Output \"Opened customer site in default browser.\")",
+      "PowerShell(Start-Process \"C:\\\\AIFDE\\\\SR GRAND HOTEL -1\\\\index.html\"; Write-Output \"Reopened site with updated number.\")",
+      "PowerShell(Start-Process \"C:\\\\AIFDE\\\\SR GRAND HOTEL -1\\\\index.html\"; Start-Sleep -Milliseconds 600; Start-Process \"C:\\\\AIFDE\\\\SR GRAND HOTEL -1\\\\admin.html\"; Write-Output \"Opened customer site and admin panel.\")"
+    ]
+  }
+}

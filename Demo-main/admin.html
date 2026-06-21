@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Owner Dashboard | Sr Grand Hotel</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+<body class="admin-body">
+
+<!-- ====== LOGIN SCREEN ====== -->
+<div id="login-screen" class="login-screen">
+  <div class="login-card">
+    <div class="login-logo">🍽</div>
+    <h1>Owner Dashboard</h1>
+    <p class="login-sub">Sr Grand Hotel Grand Multi Cuisine</p>
+    <div class="login-form">
+      <div class="form-group">
+        <label>Email</label>
+        <input type="email" id="login-email" placeholder="admin@srgrandhotel.com" autocomplete="username">
+      </div>
+      <div class="form-group">
+        <label>Password</label>
+        <input type="password" id="login-password" placeholder="Enter password" autocomplete="current-password" onkeydown="if(event.key==='Enter')doLogin()">
+      </div>
+      <p class="login-error" id="login-error"></p>
+      <button class="btn-login" onclick="doLogin()">Login to Dashboard</button>
+      <a href="index.html" class="login-back">← Back to Website</a>
+    </div>
+  </div>
+</div>
+
+<!-- ====== DASHBOARD ====== -->
+<div id="dashboard" class="dashboard" style="display:none;">
+  <!-- Sidebar -->
+  <aside class="admin-sidebar" id="admin-sidebar">
+    <div class="sidebar-brand">
+      <span>🍽</span>
+      <div>
+        <strong>Chalukya</strong>
+        <small>Owner Panel</small>
+      </div>
+    </div>
+    <nav class="sidebar-nav">
+      <button class="sidebar-link active" data-tab="overview" onclick="switchTab('overview')">📊 Dashboard</button>
+      <button class="sidebar-link" data-tab="items" onclick="switchTab('items')">🍔 Manage Items</button>
+      <button class="sidebar-link" data-tab="add" onclick="switchTab('add')">➕ Add New Item</button>
+      <button class="sidebar-link" data-tab="specials" onclick="switchTab('specials')">⭐ Daily Specials</button>
+      <button class="sidebar-link" data-tab="orders" onclick="switchTab('orders')">📦 Orders</button>
+    </nav>
+    <div class="sidebar-footer">
+      <a href="index.html" target="_blank" class="sidebar-view-site">🌐 View Website</a>
+      <button class="sidebar-logout" onclick="doLogout()">🚪 Logout</button>
+    </div>
+  </aside>
+
+  <!-- Main content -->
+  <main class="admin-main">
+    <header class="admin-header">
+      <button class="admin-menu-btn" onclick="toggleSidebar()">☰</button>
+      <h2 id="page-title">Dashboard Overview</h2>
+      <div class="admin-header-right">
+        <span class="admin-date" id="admin-date"></span>
+      </div>
+    </header>
+
+    <!-- TAB: OVERVIEW -->
+    <section class="admin-tab active" id="tab-overview">
+      <div class="stats-grid">
+        <div class="stat-card stat-blue">
+          <div class="stat-card-icon">📦</div>
+          <div class="stat-card-info"><span class="stat-card-num" id="stat-today-orders">0</span><span class="stat-card-label">Today's Orders</span></div>
+        </div>
+        <div class="stat-card stat-green">
+          <div class="stat-card-icon">💰</div>
+          <div class="stat-card-info"><span class="stat-card-num" id="stat-today-revenue">₹0</span><span class="stat-card-label">Today's Revenue</span></div>
+        </div>
+        <div class="stat-card stat-orange">
+          <div class="stat-card-icon">📈</div>
+          <div class="stat-card-info"><span class="stat-card-num" id="stat-month-orders">0</span><span class="stat-card-label">This Month's Orders</span></div>
+        </div>
+        <div class="stat-card stat-purple">
+          <div class="stat-card-icon">💵</div>
+          <div class="stat-card-info"><span class="stat-card-num" id="stat-month-revenue">₹0</span><span class="stat-card-label">This Month's Revenue</span></div>
+        </div>
+        <div class="stat-card stat-red">
+          <div class="stat-card-icon">🛒</div>
+          <div class="stat-card-info"><span class="stat-card-num" id="stat-total-orders">0</span><span class="stat-card-label">Total Orders</span></div>
+        </div>
+        <div class="stat-card stat-teal">
+          <div class="stat-card-icon">🍽</div>
+          <div class="stat-card-info"><span class="stat-card-num" id="stat-total-items">0</span><span class="stat-card-label">Menu Items</span></div>
+        </div>
+      </div>
+
+      <div class="overview-row">
+        <div class="overview-panel">
+          <h3>🏆 Most Ordered Item</h3>
+          <div id="most-ordered" class="most-ordered-box"><p class="empty-note">No orders yet.</p></div>
+        </div>
+        <div class="overview-panel">
+          <h3>📂 Popular Category</h3>
+          <div id="popular-category" class="most-ordered-box"><p class="empty-note">No orders yet.</p></div>
+        </div>
+      </div>
+
+      <div class="overview-panel">
+        <h3>📋 Recent Orders</h3>
+        <div id="recent-orders-list"></div>
+      </div>
+    </section>
+
+    <!-- TAB: MANAGE ITEMS -->
+    <section class="admin-tab" id="tab-items">
+      <div class="items-toolbar">
+        <input type="text" id="admin-item-search" placeholder="🔍 Search items to manage..." oninput="renderAdminItems()">
+        <select id="admin-cat-filter" onchange="renderAdminItems()"><!-- filled by JS --></select>
+      </div>
+      <div class="reset-wrap">
+        <button class="btn-reset" onclick="resetAllOverrides()">↺ Reset All Changes to Default</button>
+      </div>
+      <div id="admin-items-list" class="admin-items-list"></div>
+    </section>
+
+    <!-- TAB: ADD NEW ITEM -->
+    <section class="admin-tab" id="tab-add">
+      <div class="add-item-card">
+        <h3 id="add-form-title">➕ Add New Item</h3>
+        <p class="add-note">New items are saved to this browser. The website updates instantly for customers on this device.</p>
+        <input type="hidden" id="edit-item-id" value="">
+        <div class="add-grid">
+          <div class="form-group">
+            <label>Item Name *</label>
+            <input type="text" id="new-name" placeholder="e.g. Special Chicken Biryani">
+          </div>
+          <div class="form-group">
+            <label>Price (₹) *</label>
+            <input type="number" id="new-price" placeholder="e.g. 250">
+          </div>
+          <div class="form-group">
+            <label>Category *</label>
+            <select id="new-category"><!-- filled by JS --></select>
+            <button type="button" class="btn-add-cat-inline" onclick="toggleAddCategory()">＋ Add new category</button>
+            <div id="add-cat-box" class="add-cat-box" style="display:none;">
+              <input type="text" id="new-cat-name" placeholder="e.g. Cold Drinks, Water, Desserts">
+              <button type="button" onclick="addNewCategory()">Add</button>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Type *</label>
+            <select id="new-type">
+              <option value="veg">🟢 Veg</option>
+              <option value="non-veg">🔴 Non-Veg</option>
+              <option value="egg">🥚 Egg</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Serves</label>
+            <input type="text" id="new-serves" placeholder="e.g. 1-2" value="1-2">
+          </div>
+          <div class="form-group">
+            <label>Spice Level</label>
+            <select id="new-spice">
+              <option value="none">No Spice</option>
+              <option value="mild">Mild</option>
+              <option value="medium" selected>Medium</option>
+              <option value="hot">Hot</option>
+              <option value="extra-hot">Extra Hot</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Item Image</label>
+          <div class="image-input-row">
+            <label class="img-btn img-btn-camera">
+              📷 Take Photo
+              <input type="file" accept="image/*" capture="environment" onchange="previewNewImage(event)" hidden>
+            </label>
+            <label class="img-btn img-btn-upload">
+              🖼 Upload from Gallery
+              <input type="file" id="new-image-file" accept="image/*" onchange="previewNewImage(event)" hidden>
+            </label>
+          </div>
+          <p class="field-hint">On a phone, "Take Photo" opens the camera. Images are auto-compressed for fast loading. Leave blank to use a default image.</p>
+          <div id="new-image-preview" class="image-preview"></div>
+        </div>
+        <div class="form-group">
+          <label>Description</label>
+          <textarea id="new-desc" rows="3" placeholder="Describe the dish — ingredients, taste, what makes it special..."></textarea>
+        </div>
+        <div class="form-group">
+          <label>Tags</label>
+          <div class="checkbox-row">
+            <label class="cb"><input type="checkbox" id="new-bestseller"> 🔥 Best Seller</label>
+            <label class="cb"><input type="checkbox" id="new-special"> ⭐ Today's Special</label>
+            <label class="cb"><input type="checkbox" id="new-available" checked> ✅ Available</label>
+          </div>
+        </div>
+        <div class="add-actions">
+          <button class="btn-cancel-edit" id="btn-cancel-edit" onclick="cancelEdit()" style="display:none;">Cancel Edit</button>
+          <button class="btn-save-item" onclick="saveNewItem()">Save Item</button>
+        </div>
+      </div>
+
+      <div class="add-item-card" style="margin-top:18px;">
+        <h3>🗂 Your Custom Categories</h3>
+        <p class="add-note">Categories you create (e.g. Cold Drinks, Water, Desserts) appear as filters on the customer website. The 6 default categories cannot be removed.</p>
+        <div id="custom-cat-list" class="custom-cat-list"></div>
+      </div>
+    </section>
+
+    <!-- TAB: DAILY SPECIALS -->
+    <section class="admin-tab" id="tab-specials">
+      <div class="specials-admin">
+        <h3>⭐ Manage Today's Specials & Best Sellers</h3>
+        <p class="add-note">Toggle items as Today's Special (shown at top of homepage) or Best Seller. Update every morning!</p>
+        <input type="text" id="specials-search" placeholder="🔍 Search items..." oninput="renderSpecialsAdmin()">
+        <div id="specials-admin-list" class="specials-admin-list"></div>
+      </div>
+    </section>
+
+    <!-- TAB: ORDERS -->
+    <section class="admin-tab" id="tab-orders">
+      <div class="orders-toolbar">
+        <div class="orders-filter">
+          <button class="order-filter-btn active" data-range="all" onclick="setOrderRange('all')">All Time</button>
+          <button class="order-filter-btn" data-range="today" onclick="setOrderRange('today')">Today</button>
+          <button class="order-filter-btn" data-range="month" onclick="setOrderRange('month')">This Month</button>
+        </div>
+        <button class="btn-clear-orders" onclick="clearAllOrders()">🗑 Clear Order History</button>
+      </div>
+      <div id="orders-list" class="orders-list"></div>
+    </section>
+  </main>
+</div>
+
+<div class="overlay" id="admin-overlay" onclick="toggleSidebar()"></div>
+
+<!-- Firebase SDK (shared cloud database for real-time sync across devices) -->
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+
+<script src="config.js"></script>
+<script src="js/db.js"></script>
+<script src="js/menuData.js"></script>
+<script src="js/admin.js"></script>
+</body>
+</html>

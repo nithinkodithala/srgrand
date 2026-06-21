@@ -1,0 +1,178 @@
+Soups
+veg Soups
+ veg corn Soup - 90
+ veg hot and sour soup - 100
+ lemon coriander soup - 100
+ tomato soup - 110
+ veg manchow soap - 110
+Non veg Soups
+ chicken corn soup - 110
+ chicken hot and soup - 120
+ chicken manchow soup - 130
+ chicken sliver soup - 140
+Starters
+veg Starters
+ goby 65 - 210
+ baby corn chilli - 320
+ gobi manchurian - 200
+ baby corn 65 - 300
+ golden fried baby corn - 320
+ baby corn majestic - 320
+ baby corn manchurian -320
+ panner manchurian - 290
+ panner chilli - 180
+ veg chilli - 180
+ veg manchurian - 170
+ panner tikka - 240
+ aloo 65 - 130
+ veg 65 - 190
+ panner 65 - 300
+ panner majestic - 320 
+ mushroom chilli - 320
+ mushroom manchurian - 320
+ mushroom 65 - 320
+Non Veg Starters
+ Egg Fry - 190
+ Egg manchurian - 190
+ Chilli Egg - 190
+ Egg 65 - 190
+ Crispy chicken salt and pepper - 350
+ chicken dry - 360
+ spicy chicken - 360
+ chicken tikka - 260
+ chilli chicken - 300
+ murgh malai tikka - 280
+ chicken chilli kabab - 280
+ tandoori chicken - 450
+ chicken seekh kabab - 330
+ chicken fry - 260
+ tawa ticken - 350
+ garlic chicken - 350
+ chicken chilli coriander - 350
+ lemon chicken - 300
+ pepper chicken - 300
+ oil fried chicken drumstick - 300
+ schezwan lollipop - 340
+ chicken 555 - 290
+ ginger chicken - 300
+ chicken manchurian - 280
+ chicken 65 - 300
+ chicken majestic - 290
+ pepper mutton - 400 
+ mutton 65 - 400
+ chilli mutton - 400
+ telangana mutton fry - 420
+ methi mutton - 420
+ mutton fry - 480
+ fish manchurian - 260
+ chilli fish - 260
+ appollo fish - 250
+ fish fry - 200
+ chilli prawns - 300
+ loose prawns - 300
+ golden fried prawns - 300
+ prawns fry - 300
+ ginger prawns - 320
+Main course
+ methi chaman - 290
+ mushroom masala - 290
+ baby corn masala - 290
+ panner shahi korma - 290
+ palak panner - 320
+ plain palak - 200
+ panner chatpata - 200
+ kaju masala - 290
+ kaju panner - 360
+ panner tikka masala - 290
+ panner butter masala - 230
+ aloo gobi masala - 280
+ malai kofta - 300
+ Veg Shahi Korma - 280
+ Veg Kofta - 280
+ Veg Chatpata - 260
+ Veg Kolhapuri - 260 
+ Kadai veg - 230 
+ Mix veg curry - 220 
+ Dal Fry - 140
+Non Veg Main course
+ Egg burji - 90
+ methi chicken - 320
+ murgh musallam - 300
+ chicken masala - 280
+ andhra chicken curry - 300
+ telangana chicken curry - 300
+ punjabi chicken - 300
+ achari chicken - 300
+ chicken afghani - 300
+ chicken shahi korma - 300
+ chicken tikka masala - 300
+ chicken mughlai - 280
+ kadai chicken - 280
+ butter chicken  - 260
+ dum ka chicken - 240
+ chicken curry - 220
+ mutton shahi korma - 420
+ mutton keema masala - 420
+ mutton masala curry - 380
+ mutton curry - 360
+ chepala pulusu - 320
+ fish curry - 300
+ prawns curry - 390
+Breads
+ methi paratha - 60
+ butter paratha - 60
+ laccha paratha - 60
+ plain naan - 40
+ butter naan - 45
+ garlic naan - 55
+ kothmir roti - 35
+ butter tandoori roti - 35
+ tandoori roti - 30
+ rumali roti - 20
+Rice and Biryani 
+ curd rice - 110
+ Biryani
+ veg Biryani - 630
+ chicken dum Biryani - 196
+ boneless chicken Biryani - 280
+ chicken 65 piece Biryani - 280
+ chicken fry piece Biryani - 280
+ chicken Biryani - 699
+ chicken 65 biryani(Family pack) - 839
+ mutton keema Biryani - 350 
+ boneless mutton Biryani - 630
+ fish Biryani - 490
+ prawns Biryani - 532
+ chicken dum biryani(mini) - 358
+ chicken 65 Biryani(Mini) - 358
+Fried Rice and Noodles
+ Veg Fried Rice
+  Panner Fried Rice - 200
+  kaju Fried Rice - 180
+  tomato fried rice - 140
+  jeera fried rice - 180
+  veg schezwan fried rice - 180
+  veg manchurian fried rice - 160
+  veg soft fried rice - 140
+  veg fried rice - 120
+ Non veg fried rice
+  Egg Fried Rice - 120
+  Egg Soft Fried Rice - 160
+  Egg schezwan Fried Rice - 180
+  chicken Fried Rice - 160
+  chicken soft fried rice - 180
+  chicken schezwan fried rice - 200
+  chicken chilli garlic fried rice - 220
+Veg Noodles
+ Veg Mix Noodles - 210
+ Veg manchurian Noodles - 180
+ Veg Soft Noodles - 120
+ Veg Noodles - 120
+Non Veg Noodles
+ Egg schezwan Noodles - 150
+ Egg soft Noodles - 150
+ Egg soft Noodles - 150
+ egg Noodles - 140
+ chicken schezwan noodles - 200
+ chicken soft noodles - 180
+ chicken noodles - 160

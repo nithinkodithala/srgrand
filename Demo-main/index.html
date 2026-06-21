@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sr Grand Hotel Grand Multi Cuisine Restaurant - Authentic Indian & Indo-Chinese cuisine. Order online via WhatsApp.">
+  <title>Sr Grand Hotel Grand Multi Cuisine Restaurant</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ====== WELCOME SPLASH SCREEN ====== -->
+<div id="splash-screen">
+  <div class="splash-content">
+    <div class="splash-logo">🍽</div>
+    <h1>Welcome to</h1>
+    <h2>Sr Grand Hotel</h2>
+    <p class="splash-sub">Grand Multi Cuisine Restaurant</p>
+    <p class="splash-tagline">Thank You For Choosing Us</p>
+    <button class="splash-btn" onclick="closeSplash()">Explore Menu</button>
+    <p class="splash-timer">Entering in <span id="splash-count">3</span>s</p>
+  </div>
+</div>
+
+<!-- ====== NAVIGATION ====== -->
+<nav id="navbar">
+  <div class="nav-container">
+    <div class="nav-brand">
+      <span class="brand-icon">🍽</span>
+      <div class="brand-text">
+        <span class="brand-main">Sr Grand Hotel</span>
+        <span class="brand-sub">Grand Multi Cuisine</span>
+      </div>
+    </div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#home" onclick="closeMenu()">Home</a></li>
+      <li><a href="#about" onclick="closeMenu()">About</a></li>
+      <li><a href="#menu" onclick="closeMenu()">Menu</a></li>
+      <li><a href="#gallery" onclick="closeMenu()">Gallery</a></li>
+      <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="veg-toggle" id="veg-toggle" onclick="toggleVegMode()" title="Toggle Veg Mode">
+        <span class="veg-icon">🌱</span>
+        <span class="veg-label">Veg Mode</span>
+      </button>
+      <button class="cart-btn" onclick="openCart()">
+        <span class="cart-icon">🛒</span>
+        <span class="cart-count" id="cart-count">0</span>
+      </button>
+      <button class="hamburger" id="hamburger" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- ====== HOME SECTION ====== -->
+<section id="home">
+  <div class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="hero-tagline">Authentic Flavours Since Years</p>
+      <h1 class="hero-title">Sr Grand Hotel<br><span>Grand Multi Cuisine</span></h1>
+      <p class="hero-desc">From rich Mughlai curries to sizzling tandoor dishes, crispy Indo-Chinese starters to aromatic Dum Biryanis — experience the best of Indian multi-cuisine under one roof.</p>
+      <div class="hero-btns">
+        <a href="#menu" class="btn-primary">Order Now</a>
+        <a href="#about" class="btn-outline">Our Story</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><span class="stat-num">160+</span><span class="stat-label">Menu Items</span></div>
+        <div class="stat"><span class="stat-num">8+</span><span class="stat-label">Cuisines</span></div>
+        <div class="stat"><span class="stat-num">⭐⭐⭐⭐⭐</span><span class="stat-label">Rated</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Today's Specials Banner -->
+  <div class="specials-banner" id="specials-banner">
+    <div class="specials-inner">
+      <h3 class="specials-title">⭐ Today's Specials</h3>
+      <div class="specials-grid" id="specials-grid">
+        <!-- Filled by JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Best Sellers -->
+  <div class="bestsellers-section">
+    <div class="section-header">
+      <h2>🔥 Best Sellers</h2>
+      <p>Our most loved dishes — ordered again and again</p>
+    </div>
+    <div class="bestsellers-grid" id="bestsellers-grid">
+      <!-- Filled by JS -->
+    </div>
+    <div class="see-all-wrap">
+      <a href="#menu" class="btn-primary">See Full Menu</a>
+    </div>
+  </div>
+</section>
+
+<!-- ====== ABOUT SECTION ====== -->
+<section id="about">
+  <div class="about-container">
+    <div class="about-image-col">
+      <div class="about-img-stack">
+        <img src="Images/chicken dum Biryani.jpg" alt="Chicken Dum Biryani" class="about-img-main">
+        <img src="Images/butter chicken.jpg" alt="Butter Chicken" class="about-img-sm about-img-sm1">
+        <img src="Images/chicken 65.jpg" alt="Chicken 65" class="about-img-sm about-img-sm2">
+        <div class="about-badge">
+          <span>Authentic</span>
+          <strong>Taste</strong>
+        </div>
+      </div>
+    </div>
+    <div class="about-content-col">
+      <p class="section-label">Our Story</p>
+      <h2>A Passion for Food,<br>A Commitment to Quality</h2>
+      <p>Nestled in the heart of the city at Chalukya Complex, Sr Grand Hotel Grand Multi Cuisine Restaurant has been serving authentic, heartfelt food for our beloved community. We believe every meal should be a celebration.</p>
+      <p>From traditional Telangana curries to Mughlai biryanis, from sizzling tandoor platters to crispy Indo-Chinese starters — our kitchen brings the richness of India's diverse culinary heritage to your plate.</p>
+      <div class="about-features">
+        <div class="about-feat"><span>🍳</span><div><strong>Hygienic Kitchen</strong><p>Cooked fresh every day with the finest ingredients</p></div></div>
+        <div class="about-feat"><span>🌾</span><div><strong>Fresh Ingredients</strong><p>We source local, fresh ingredients for authentic taste</p></div></div>
+        <div class="about-feat"><span>👨‍👩‍👧‍👦</span><div><strong>Family Dining</strong><p>A warm, welcoming space for the whole family</p></div></div>
+        <div class="about-feat"><span>🏠</span><div><strong>Home Delivery</strong><p>Hot, fresh food delivered right to your doorstep</p></div></div>
+        <div class="about-feat"><span>🥡</span><div><strong>Takeaway</strong><p>Quick and convenient packing for busy days</p></div></div>
+        <div class="about-feat"><span>⏰</span><div><strong>Open Daily</strong><p id="about-timings">11:00 AM – 11:00 PM</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== MENU SECTION ====== -->
+<section id="menu">
+  <div class="menu-container">
+    <div class="section-header">
+      <p class="section-label">Our Menu</p>
+      <h2>What Would You Like Today?</h2>
+      <p>160+ dishes across 8 categories — veg, non-veg and everything in between</p>
+    </div>
+
+    <!-- Search & Filter Bar -->
+    <div class="menu-controls">
+      <div class="search-box">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="menu-search" placeholder="Search for biryani, paneer, chicken..." oninput="filterMenu()">
+        <button class="search-clear" id="search-clear" onclick="clearSearch()">✕</button>
+      </div>
+      <div class="filter-tags" id="filter-tags">
+        <!-- Filter buttons rendered by JS (includes owner's custom categories) -->
+      </div>
+    </div>
+
+    <!-- No results -->
+    <div class="no-results" id="no-results" style="display:none;">
+      <span>😕</span>
+      <p>No items found. Try a different search or filter.</p>
+      <button onclick="clearSearch(); setFilter('all')">Show All Items</button>
+    </div>
+
+    <!-- Menu Items Grid -->
+    <div id="menu-sections">
+      <!-- Filled by JS -->
+    </div>
+  </div>
+</section>
+
+<!-- ====== GALLERY SECTION ====== -->
+<section id="gallery">
+  <div class="gallery-container">
+    <div class="section-header">
+      <p class="section-label">Gallery</p>
+      <h2>A Feast for the Eyes</h2>
+      <p>A glimpse of the dishes and experience that await you</p>
+    </div>
+    <div class="gallery-grid">
+      <div class="gallery-item large"><img src="Images/chicken dum Biryani.jpg" alt="Chicken Dum Biryani"><div class="gallery-caption">Chicken Dum Biryani</div></div>
+      <div class="gallery-item"><img src="Images/butter chicken.jpg" alt="Butter Chicken"><div class="gallery-caption">Butter Chicken</div></div>
+      <div class="gallery-item"><img src="Images/chicken 65.jpg" alt="Chicken 65"><div class="gallery-caption">Chicken 65</div></div>
+      <div class="gallery-item"><img src="Images/appollo fish.jpg" alt="Apollo Fish"><div class="gallery-caption">Apollo Fish</div></div>
+      <div class="gallery-item large"><img src="Images/telangana mutton fry.jpg" alt="Telangana Mutton Fry"><div class="gallery-caption">Telangana Mutton Fry</div></div>
+      <div class="gallery-item"><img src="Images/panner tikka masala.jpg" alt="Paneer Tikka Masala"><div class="gallery-caption">Paneer Tikka Masala</div></div>
+      <div class="gallery-item"><img src="Images/chicken Biryani.jpg" alt="Chicken Biryani"><div class="gallery-caption">Chicken Biryani</div></div>
+      <div class="gallery-item"><img src="Images/tandoori chicken.jpg" alt="Tandoori Chicken"><div class="gallery-caption">Tandoori Chicken</div></div>
+      <div class="gallery-item"><img src="Images/chepala pulusu.jpg" alt="Chepala Pulusu"><div class="gallery-caption">Chepala Pulusu</div></div>
+      <div class="gallery-item"><img src="Images/palak panner.jpg" alt="Palak Paneer"><div class="gallery-caption">Palak Paneer</div></div>
+      <div class="gallery-item"><img src="Images/mutton fry.jpg" alt="Mutton Fry"><div class="gallery-caption">Mutton Fry</div></div>
+      <div class="gallery-item large"><img src="Images/prawns Biryani.jpg" alt="Prawns Biryani"><div class="gallery-caption">Prawns Biryani</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== CONTACT SECTION ====== -->
+<section id="contact">
+  <div class="contact-container">
+    <div class="section-header light">
+      <p class="section-label light-label">Find Us</p>
+      <h2>Contact & Location</h2>
+      <p>We're here for you — reach out anytime</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-card" id="call-card" onclick="handleCall()">
+        <div class="contact-icon">📞</div>
+        <h3>Call Us</h3>
+        <p id="contact-phone">+91 99999 99999</p>
+        <span class="contact-action">Tap to Call</span>
+      </div>
+      <div class="contact-card" id="wa-card" onclick="handleWhatsApp()">
+        <div class="contact-icon">💬</div>
+        <h3>WhatsApp</h3>
+        <p id="contact-whatsapp">+91 99999 99999</p>
+        <span class="contact-action">Chat Now</span>
+      </div>
+      <div class="contact-card" id="map-card" onclick="handleMap()">
+        <div class="contact-icon">📍</div>
+        <h3>Our Location</h3>
+        <p id="contact-address">1st Floor, Chalukya Complex</p>
+        <span class="contact-action">Get Directions</span>
+      </div>
+      <div class="contact-card">
+        <div class="contact-icon">⏰</div>
+        <h3>Opening Hours</h3>
+        <p id="contact-timings">11:00 AM – 11:00 PM</p>
+        <span class="contact-action open-status" id="open-status">Checking...</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== FOOTER ====== -->
+<footer>
+  <div class="footer-content">
+    <div class="footer-brand">
+      <span>🍽</span>
+      <div>
+        <strong>Sr Grand Hotel</strong>
+        <span>Grand Multi Cuisine Restaurant</span>
+      </div>
+    </div>
+    <p class="footer-address" id="footer-address">1st Floor, Chalukya Complex</p>
+    <div class="footer-links">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#menu">Menu</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact">Contact</a>
+      <a href="admin.html">Owner Login</a>
+    </div>
+    <p class="footer-copy">&copy; 2026 Sr Grand Hotel Grand Multi Cuisine Restaurant. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- ====== FLOATING ACTION BUTTONS ====== -->
+<div class="fab-container">
+  <button class="fab fab-call" onclick="handleCall()" title="Call Us">📞</button>
+  <button class="fab fab-wa" onclick="handleWhatsApp()" title="WhatsApp">💬</button>
+  <button class="fab fab-cart" onclick="openCart()" title="View Cart">
+    🛒<span class="fab-cart-count" id="fab-cart-count">0</span>
+  </button>
+  <button class="fab fab-map" onclick="handleMap()" title="Get Directions">📍</button>
+</div>
+
+<!-- ====== OVERLAY ====== -->
+<div class="overlay" id="overlay" onclick="closeCart(); closeItemModal(); closeCustomizeModal()"></div>
+
+<!-- ====== CART DRAWER ====== -->
+<div class="cart-drawer" id="cart-drawer">
+  <div class="cart-header">
+    <h3>🛒 Your Cart</h3>
+    <button class="cart-close" onclick="closeCart()">✕</button>
+  </div>
+  <div class="cart-body" id="cart-body">
+    <!-- Filled by JS -->
+  </div>
+  <div class="cart-footer" id="cart-footer" style="display:none;">
+    <div class="cart-total">
+      <span>Total</span>
+      <span id="cart-total-amount">₹0</span>
+    </div>
+    <button class="btn-checkout" onclick="proceedToCheckout()">Place Order via WhatsApp</button>
+  </div>
+</div>
+
+<!-- ====== ORDER FORM MODAL ====== -->
+<div class="modal" id="order-modal">
+  <div class="modal-content order-modal-content">
+    <div class="modal-header">
+      <h3>Complete Your Order</h3>
+      <button class="modal-close" onclick="closeOrderModal()">✕</button>
+    </div>
+    <div class="modal-body">
+      <p class="order-note">Please fill in your details. Your order will be sent to us via WhatsApp.</p>
+      <div class="form-group">
+        <label>Your Name *</label>
+        <input type="text" id="order-name" placeholder="Enter your full name" required>
+      </div>
+      <div class="form-group">
+        <label>Mobile Number *</label>
+        <input type="tel" id="order-mobile" placeholder="Enter your mobile number" maxlength="10" required>
+      </div>
+      <div class="form-group">
+        <label>Delivery Address *</label>
+        <textarea id="order-address" placeholder="Enter your full delivery address" rows="2" required></textarea>
+      </div>
+      <div class="form-group">
+        <label>Landmark (Optional)</label>
+        <input type="text" id="order-landmark" placeholder="e.g. Near Bus Stand, Opposite School">
+      </div>
+      <div class="order-summary-preview" id="order-summary-preview">
+        <!-- Filled by JS -->
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button class="btn-cancel" onclick="closeOrderModal()">Back to Cart</button>
+      <button class="btn-send-order" onclick="sendWhatsAppOrder()">Send Order on WhatsApp 💬</button>
+    </div>
+  </div>
+</div>
+
+<!-- ====== ITEM DETAIL MODAL ====== -->
+<div class="modal" id="item-modal">
+  <div class="modal-content item-modal-content">
+    <button class="modal-close" onclick="closeItemModal()">✕</button>
+    <div id="item-modal-body">
+      <!-- Filled by JS -->
+    </div>
+  </div>
+</div>
+
+<!-- ====== CUSTOMIZE MODAL ====== -->
+<div class="modal" id="customize-modal">
+  <div class="modal-content customize-modal-content">
+    <div class="modal-header">
+      <h3>Customize Your Order</h3>
+      <button class="modal-close" onclick="closeCustomizeModal()">✕</button>
+    </div>
+    <div class="modal-body">
+      <div id="customize-item-info"></div>
+      <p class="customize-label">Special Instructions (Optional)</p>
+      <div class="quick-customizations">
+        <button class="quick-opt" onclick="toggleQuickOpt(this)">Less Spicy</button>
+        <button class="quick-opt" onclick="toggleQuickOpt(this)">Medium Spicy</button>
+        <button class="quick-opt" onclick="toggleQuickOpt(this)">Extra Spicy</button>
+        <button class="quick-opt" onclick="toggleQuickOpt(this)">Extra Onion</button>
+        <button class="quick-opt" onclick="toggleQuickOpt(this)">No Onion</button>
+        <button class="quick-opt" onclick="toggleQuickOpt(this)">No Coriander</button>
+        <button class="quick-opt" onclick="toggleQuickOpt(this)">Extra Gravy</button>
+        <button class="quick-opt" onclick="toggleQuickOpt(this)">Less Oil</button>
+        <button class="quick-opt" onclick="toggleQuickOpt(this)">No Garlic</button>
+        <button class="quick-opt" onclick="toggleQuickOpt(this)">Extra Crispy</button>
+      </div>
+      <textarea id="custom-note" placeholder="Any other special requests? e.g. No salt, extra lemon, pack separately..." rows="3"></textarea>
+    </div>
+    <div class="modal-footer">
+      <button class="btn-cancel" onclick="closeCustomizeModal()">Cancel</button>
+      <button class="btn-add-cart" onclick="addToCartFromCustomize()">Add to Cart</button>
+    </div>
+  </div>
+</div>
+
+<!-- ====== THANK YOU SCREEN ====== -->
+<div class="thankyou-screen" id="thankyou-screen" style="display:none;">
+  <div class="thankyou-content">
+    <div class="thankyou-icon">🎉</div>
+    <h2>Thank You!</h2>
+    <h3>Your order has been sent successfully.</h3>
+    <p>Our restaurant will contact you shortly to confirm your order.</p>
+    <p class="thankyou-sub">Check your WhatsApp for order confirmation.</p>
+    <div class="thankyou-btns">
+      <button class="btn-primary" onclick="orderAgain()">Order Again</button>
+      <a href="#menu" class="btn-outline" onclick="orderAgain()">Back to Menu</a>
+    </div>
+  </div>
+</div>
+
+<!-- Firebase SDK (shared cloud database for real-time sync across devices) -->
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+
+<script src="config.js"></script>
+<script src="js/db.js"></script>
+<script src="js/menuData.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,379 @@
+Restaurant Name : Sr Grand Hotel Grand Multi Cusine Restaurant
+Map Address : 1st Floor, Chalukya Complex
+Mobile no:
+Whatsapp
+the personal details should be stored in .env file like mobileno, map, Whatsapp no
+also for owner give the option that owner can add the items 
+ -item Name
+ -item image
+ -description( more, hide)
+ -serves
+ -spicy 
+ if already exists the owner can delete them, update
+ the owner can items available, not available
+when ever the owner makes changes that should get reflected in customers website
+the owner will adds daily items every days special food items
+the owner should have dashboard everydays orders, every month, 
+customers website
+Restaurant Logo, Restaurant Name                                 
+Home About  Menu Gallery OrderOnline Contact  Cart
+under Contact
+ show call
+ Whatsapp
+ Address
+ timings
+ whenever clicked on respective fields then it should redirected to that app
+give the option veg mode, when the veg mode is enabled no other no other non veg items should get hidden
+when ever the customers places an order then Restaurant owner should receive Whatsapp message
+- Whatsapp message appear like
+  NEW ORDER
+  Customer Name:Sai Teja
+  Mobile: 9876543210
+  Address: live location XYZ Colony
+  Items: Chicken Biryani x2
+  Chicken 65 x1
+  customization:
+  Total: ₹692
+for the customer when the customer adds an item to cart then give option for every item customization input box 
+the every information should be completely indetailed clarity
+when the customer enters url then first ui should starts with welcome to Restaurant, thanks for choosing, after order completed show thank you order again
+the ui should be user friendly 
+under menu give search bar to search item 
+also give filter for varities
+# Additional Features Recommended
+
+## 1. Menu Availability Status
+
+Owner Dashboard:
+
+* Available
+* Not Available
+* Today's Special
+* Best Seller
+
+Customer View:
+
+✅ Available
+
+❌ Currently Not Available
+
+This prevents customers ordering unavailable items.
+
+---
+
+## 2. Daily Specials Section
+
+Homepage:
+
+Today's Specials
+
+Owner can update every morning.
+
+Examples:
+
+* Chicken Dum Biryani
+* Telangana Mutton Fry
+* Apollo Fish
+
+Display at top of homepage.
+
+---
+
+## 3. Best Seller Section
+
+Examples:
+
+🔥 Chicken Dum Biryani
+
+🔥 Chicken 65
+
+🔥 Apollo Fish
+
+🔥 Butter Chicken
+
+Customers usually order popular items.
+
+---
+
+## 4. Search Bar
+
+Customer can search:
+
+* Chicken
+* Paneer
+* Fish
+* Biryani
+* Soup
+
+Instant filtering.
+
+---
+
+## 5. Menu Filters
+
+Filter By:
+
+* Veg
+* Non Veg
+* Best Seller
+* Today's Special
+* Available Items
+* Soups
+* Starters
+* Main Course
+* Biryani
+* Fried Rice
+* Noodles
+* Breads
+
+---
+
+## 6. Veg Mode
+
+Navbar Toggle:
+
+🌱 Veg Mode
+
+When enabled:
+
+Hide:
+
+* Chicken
+* Mutton
+* Fish
+* Prawns
+* Egg
+
+Show only vegetarian items.
+
+---
+
+## 7. Item Card Structure
+
+Food Image
+
+Item Name
+
+Price
+
+Veg / Non Veg Badge
+
+Serves
+
+Spice Level
+
+Description
+
+More Details Button
+
+Add To Cart
+
+Availability Status
+
+---
+
+## 8. Item Customization
+
+Before Add To Cart:
+
+Special Instructions
+
+Examples:
+
+* Less Spicy
+* Medium Spicy
+* Extra Spicy
+* Extra Onion
+* No Onion
+* No Coriander
+* Extra Gravy
+
+Custom Note Textbox
+
+This note should be sent through WhatsApp.
+
+---
+
+## 9. Contact Section
+
+Call Button
+
+WhatsApp Button
+
+Address
+
+Opening Hours
+
+Directions Button
+
+Click Actions:
+
+Phone -> Dialer
+
+WhatsApp -> WhatsApp Chat
+
+Address -> Google Maps
+
+---
+
+## 10. Welcome Screen
+
+First Visit:
+
+Welcome to
+
+Sr Grand Hotel Grand Multi Cuisine Restaurant
+
+Thank You For Choosing Us
+
+[Explore Menu]
+
+After 3 seconds enter homepage.
+
+---
+
+## 11. Thank You Screen
+
+After Order:
+
+Thank You
+
+Your order has been sent successfully.
+
+Restaurant will contact you shortly.
+
+Order Again Button
+
+Back To Menu Button
+
+---
+
+## 12. Floating Action Buttons
+
+Always Visible:
+
+📞 Call
+
+💬 WhatsApp
+
+🛒 Cart
+
+📍 Directions
+
+Mobile Friendly.
+
+---
+
+## 13. Gallery Section
+
+Food Images
+
+Restaurant Images
+
+Family Seating
+
+Dining Hall
+
+Kitchen
+
+Builds trust.
+
+---
+
+## 14. About Section
+
+Restaurant Story
+
+Years in Business
+
+Family Dining
+
+Takeaway
+
+Home Delivery
+
+Hygienic Kitchen
+
+Fresh Ingredients
+
+---
+
+## 15. Dashboard Analytics
+
+Owner Dashboard
+
+Today's Orders
+
+Monthly Orders
+
+Most Ordered Item
+
+Today's Revenue
+
+Monthly Revenue
+
+Popular Category
+
+Total Orders
+
+---
+
+## 16. Environment Variables
+
+Store:
+
+RESTAURANT_NAME
+
+RESTAURANT_PHONE
+
+RESTAURANT_WHATSAPP
+
+RESTAURANT_MAP_URL
+
+RESTAURANT_ADDRESS
+
+OPEN_TIME
+
+CLOSE_TIME
+
+ADMIN_EMAIL
+
+ADMIN_PASSWORD
+
+Never hardcode these values.
+
+---
+
+## 17. WhatsApp Order Format
+
+🍽 NEW ORDER
+
+Customer Name:
+Sai Teja
+
+Mobile:
+9876543210
+
+Address:
+XYZ Colony
+
+Landmark:
+Near Bus Stand
+
+Items:
+
+Chicken Biryani x2
+
+Chicken 65 x1
+
+Customization:
+
+Less Spicy
+
+Extra Onion
+
+Total:
+₹692
+
+Order Time:
+20-Jun-2026 08:30 PM
